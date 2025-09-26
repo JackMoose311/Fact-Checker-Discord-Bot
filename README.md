@@ -1,15 +1,15 @@
-Fact-Checker Discord Bot!!!
+**Fact-Checker Discord Bot!!!**
 A Discord bot that fact-checks user claims in real time using OpenAI’s GPT models.  
 Mention the bot in any server, and it will respond with concise, evidence-based verification — always in a playful “nerdy” tone.
 
-Features:
+**Features**:
 - Responds whenever it’s mentioned in a message  
-- Sends claims to **OpenAI GPT-4o-mini** for fact-checking  
+- Sends claims to OpenAI GPT-4o-mini for fact-checking  
 - Provides concise, evidence-backed answers  
 - Secure API key handling with `.env` variables
 
-Installation:
-1. Clone the Repository ww
+**Installation:**
+1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/Fact-Checker-Discord-Bot.git
@@ -28,13 +28,15 @@ OPENAI_API_KEY=your_openai_api_key_here
 python Fact-Checker-DiscordBot.py
 ```
 
-Dependencies:
+**Dependencies:**
 The project uses:
 - discord.py>=2.3.0
 - openai>=1.0.0
 - python-dotenv
 
-This bot is hosted on Discloud for 24/7 runtime.
+*This bot is hosted on Discloud for 24/7 runtime.*
 
-~~~~INVITE THE BOT TO YOUR SERVER~~~~
+**INVITE THE BOT TO YOUR SERVER**
+```bash
 https://discord.com/oauth2/authorize?client_id=1420869593089572876
+```
