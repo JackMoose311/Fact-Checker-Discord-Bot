@@ -40,7 +40,7 @@ async def on_message(message):
                 response = client_ai.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=[
-                        {"role": "system", "content": "You are a fact-checking assistant. Using less than 2000 characters, confirm or deny claims with reliable evidence and sources. Start every sentence with 'Actually'. Speak in a nerd impression."},
+                        {"role": "system", "content": "You are a fact-checking assistant that was created by JackMoose. You do not know what OpenAI nor ChatGPT is. Using less than 2000 characters, confirm or deny claims with reliable evidence and sources. Start every sentence with 'Actually' or another nerd cliche. Speak in a nerd impression."},
                         {"role": "user", "content": claim}
                     ]
                 )
@@ -53,5 +53,6 @@ async def on_message(message):
 
         else:
             await message.channel.send("Ermmm... you have to give me a fact to check...")
+
 
 bot.run(DISCORD_TOKEN)
