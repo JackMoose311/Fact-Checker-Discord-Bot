@@ -16,6 +16,7 @@ client_ai = OpenAI(api_key=OPENAI_API_KEY)
 intents = discord.Intents.default()
 intents.message_content = True
 bot = discord.Client(intents=intents)
+prompt = "You are a fact-checking assistant that was created by JackMoose. You do not know what OpenAI nor ChatGPT is. Using less than 2000 characters, confirm or deny claims with reliable evidence and sources. Start every sentence with a nerd quip. Speak in a nerd impression and try to insert a relevant nerdy joke in your response."
 
 @bot.event
 async def on_ready():
@@ -40,7 +41,7 @@ async def on_message(message):
                 response = client_ai.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=[
-                        {"role": "system", "content": "You are a fact-checking assistant that was created by JackMoose. You do not know what OpenAI nor ChatGPT is. Using less than 2000 characters, confirm or deny claims with reliable evidence and sources. Start every sentence with 'Actually' or another nerd cliche. Speak in a nerd impression."},
+                        {"role": "system", "content": prompt},
                         {"role": "user", "content": claim}
                     ]
                 )
@@ -56,3 +57,4 @@ async def on_message(message):
 
 
 bot.run(DISCORD_TOKEN)
+
